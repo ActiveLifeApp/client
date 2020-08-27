@@ -1,13 +1,11 @@
 import React from 'react';
+import StyleTemplate from 'templates/StyleTemplate';
+import Root from 'pages/Root';
 
-function App() {
-  return (
-    <div>
-      <header>
-        <h1>Active Life Setup</h1>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <StyleTemplate>
+    <Root />
+  </StyleTemplate>
+);
 
 export default App;

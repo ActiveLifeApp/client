@@ -24,5 +24,20 @@ declare module 'styled-components' {
       information20: string;
       information40: string;
     };
+    sizes: {
+      xxs: string;
+      xs: string;
+      s: string;
+      m: string;
+      l: string;
+      xl: string;
+      xxl: string;
+      xxxl: string;
+    };
+    weights: {
+      light: string;
+      regular: string;
+      bold: string;
+    };
   }
 }
