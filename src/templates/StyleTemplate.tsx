@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'styles/GlobalStyle';
 import { Normalize } from 'styled-normalize';
@@ -8,7 +8,7 @@ interface IProps {
   children: ReactNode;
 }
 
-const StyleTemplate = ({ children }: IProps) => (
+const StyleTemplate: FC<IProps> = ({ children }) => (
   <ThemeProvider theme={theme}>
     <Normalize />
     <GlobalStyle />

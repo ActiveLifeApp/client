@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const Root = () => (
+const Root: FC = () => (
   <header>
     <h1>Active Life App</h1>
   </header>
