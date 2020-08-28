@@ -13,7 +13,7 @@
   },
   "rules": {
     "@typescript-eslint/no-unnecessary-type-assertion": 2,
-    "react/prop-types": 0
-
+    "react/prop-types": 0,
+    "import/prefer-default-export": 0
   }
 }
