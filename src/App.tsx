@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
-import MainTemplate from 'templates/MainTemplate';
+import StyleTemplate from 'templates/StyleTemplate';
 import Root from 'pages/Root';
 
 const App: FC = () => (
-  <MainTemplate>
+  <StyleTemplate>
     <Root />
-  </MainTemplate>
+  </StyleTemplate>
 );
 
 export default App;
