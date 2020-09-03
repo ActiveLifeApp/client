@@ -9,12 +9,12 @@ const RadioButton: React.SFC<RadioButtonProps> = ({ label, checked, id, name }) 
     <StyledRadioButton>
       <input
         onClick={() => setIsChecked((prevState) => !prevState)}
-        type="checkbox"
+        type="radio"
         id={id}
         name={name}
         checked={isChecked}
       />
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={id}>{label}</label>
     </StyledRadioButton>
   );
 };
