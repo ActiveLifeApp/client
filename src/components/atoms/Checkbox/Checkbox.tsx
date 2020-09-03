@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CheckboxProps } from './Checkbox.model';
 import StyledCheckbox from './Checkbox.styled';
 
-const Button: React.SFC<CheckboxProps> = ({ label, checked, id, name }) => {
+const Checkbox: React.SFC<CheckboxProps> = ({ label, checked, id, name }) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   return (
@@ -14,9 +14,9 @@ const Button: React.SFC<CheckboxProps> = ({ label, checked, id, name }) => {
         name={name}
         checked={isChecked}
       />
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={id}>{label}</label>
     </StyledCheckbox>
   );
 };
 
-export default Button;
+export default Checkbox;
