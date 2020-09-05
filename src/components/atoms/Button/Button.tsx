@@ -1,10 +1,6 @@
 import React from 'react';
 import { StyledPrimaryButton, StyledSecondaryButton } from './Button.styled';
-
-export interface ButttonProps {
-  disabled?: boolean;
-  secondary?: boolean;
-}
+import { ButttonProps } from './Button.model';
 
 const Button: React.SFC<ButttonProps> = ({ children, disabled, secondary }) => {
   return (
