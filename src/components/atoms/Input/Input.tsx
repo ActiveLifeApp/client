@@ -13,7 +13,7 @@ const Checkbox: React.FC<InputProps> = ({ type, label, id, name, error }) => {
   };
 
   return (
-    <StyledInputBar error={error}>
+    <StyledInputBar error={error} type={type}>
       <input type={inputType} name={name} id={id} placeholder=" " />
       <label htmlFor={id}>{label}</label>
       {type === 'password' && <input type="button" onClick={handleButtonClick} />}

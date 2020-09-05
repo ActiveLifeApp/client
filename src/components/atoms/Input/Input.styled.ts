@@ -1,16 +1,28 @@
 import styled from 'styled-components';
 import watchIcon from 'assets/icons/watch.svg';
 
-const StyledInputBar: React.FC<{ error?: string }> = styled.div<{ error?: string }>`
-  width: 100%;
+const StyledInputBar: React.FC<{ error?: string; type?: string }> = styled.div<{
+  error?: string;
+  type?: string;
+}>`
   margin: 24px 0;
   position: relative;
   > input {
+    padding-right: ${({ type }) => type === 'password' && '40px'};
     border: none;
     border-bottom: 1px solid
       ${({ theme, error }) => (error ? theme.colors.error20 : theme.colors.neutral60)};
-    background-color: none;
     font-size: ${({ theme }) => theme.sizes.s};
+    background: none;
+  }
+  > input:not([type='button']) {
+    width: 100%;
+  }
+  > input[type='button'] {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
   > input:focus {
     outline: none;
