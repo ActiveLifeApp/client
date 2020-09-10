@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RadioButtonProps } from './RadioButton.model';
 import StyledRadioButton from './RadioButton.styled';
 
-const RadioButton: React.SFC<RadioButtonProps> = ({ label, checked, id, name }) => {
+const RadioButton: React.FC<RadioButtonProps> = ({ label, checked, id, name }) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   return (

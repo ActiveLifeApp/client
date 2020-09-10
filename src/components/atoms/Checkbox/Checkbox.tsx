@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CheckboxProps } from './Checkbox.model';
 import StyledCheckbox from './Checkbox.styled';
 
-const Checkbox: React.SFC<CheckboxProps> = ({ label, checked, id, name }) => {
+const Checkbox: React.FC<CheckboxProps> = ({ label, checked, id, name }) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   return (

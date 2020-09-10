@@ -7,6 +7,6 @@ export default {
   component: ButtonLogin,
 } as Meta;
 
-export const Google: React.SFC<{}> = () => <ButtonLogin icon="google" />;
-export const Facebook: React.SFC<{}> = () => <ButtonLogin icon="facebook" />;
-export const Default: React.SFC<{}> = () => <ButtonLogin />;
+export const Google: React.FC<{}> = () => <ButtonLogin icon="google" />;
+export const Facebook: React.FC<{}> = () => <ButtonLogin icon="facebook" />;
+export const Default: React.FC<{}> = () => <ButtonLogin />;

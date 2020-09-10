@@ -8,5 +8,5 @@ export default {
   component: Avatar,
 } as Meta;
 
-export const Primary: React.SFC<{}> = () => <Avatar />;
-export const PrimaryWithAvatar: React.SFC<{}> = () => <Avatar avatarURL={avatarPerson} />;
+export const Primary: React.FC<{}> = () => <Avatar />;
+export const PrimaryWithAvatar: React.FC<{}> = () => <Avatar avatarURL={avatarPerson} />;

@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledPrimaryButton, StyledSecondaryButton } from './Button.styled';
 import { ButttonProps } from './Button.model';
 
-const Button: React.SFC<ButttonProps> = ({ children, disabled, secondary }) => {
+const Button: React.FC<ButttonProps> = ({ children, disabled, secondary }) => {
   return (
     <>
       {secondary ? (

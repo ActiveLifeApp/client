@@ -7,6 +7,6 @@ export default {
   component: RadioButton,
 } as Meta;
 
-export const Primary: React.SFC<{}> = () => (
+export const Primary: React.FC<{}> = () => (
   <RadioButton label="radiobutton" name="example" id="example" />
 );

@@ -7,6 +7,6 @@ export default {
   component: Checkbox,
 } as Meta;
 
-export const Primary: React.SFC<{}> = () => (
+export const Primary: React.FC<{}> = () => (
   <Checkbox label="checkbox" name="example" id="example" />
 );

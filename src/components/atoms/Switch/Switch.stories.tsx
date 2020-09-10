@@ -7,4 +7,4 @@ export default {
   component: Switch,
 } as Meta;
 
-export const Primary: React.SFC<{}> = () => <Switch label="Switch" name="example" id="example" />;
+export const Primary: React.FC<{}> = () => <Switch label="Switch" name="example" id="example" />;
