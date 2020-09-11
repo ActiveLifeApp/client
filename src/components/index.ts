@@ -8,4 +8,6 @@ export { default as ButtonLogin } from './atoms/ButtonLogin';
 export { default as Typography } from './atoms/Typography';
 
 export { default as AuthForm } from './molecules/AuthForm';
+export { default as SliderItem } from './molecules/SliderItem';
 
+export { default as Slider } from './organisms/Slider';
