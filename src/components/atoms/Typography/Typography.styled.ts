@@ -1,17 +1,5 @@
 import styled from 'styled-components';
-import { StyledHeadingProps, StyledParagraphProps } from './Typography.model';
-
-enum VariantSizes {
-  'h1' = 'xxxl',
-  'h2' = 'xxl',
-  'h3' = 'xl',
-  'h4' = 'l',
-  'h5' = 'm',
-  'h6' = 'xs',
-  'p1' = 's',
-  'p2' = 'xs',
-  'p3' = 'xxs',
-}
+import { StyledHeadingProps, StyledParagraphProps, VariantSizes } from './Typography.model';
 
 export const StyledHeading = styled.h1<StyledHeadingProps>`
   font-weight: ${({ theme }) => theme.weights.bold};
