@@ -16,6 +16,8 @@ const variantSizes = {
 export const StyledHeading = styled.h1<StyledHeadingProps>`
   font-weight: ${({ theme }) => theme.weights.bold};
   font-size: ${({ theme, variant }) => theme.sizes[variantSizes[variant]]};
+  margin: ${({ margin }) => margin || '10px 0'};
+  text-align: ${({ align }) => align || 'left'};
 `;
 
 export const StyledParagraph = styled.p<StyledParagraphProps>`
@@ -24,4 +26,6 @@ export const StyledParagraph = styled.p<StyledParagraphProps>`
   font-size: ${({ theme, variant }) => theme.sizes[variantSizes[variant]]};
   color: ${({ theme, variant }) =>
     variant === 'p1' ? theme.colors.black : theme.colors.neutral20};
+  margin: ${({ margin }) => margin || '10px 0'};
+  text-align: ${({ align }) => align || 'left'};
 `;

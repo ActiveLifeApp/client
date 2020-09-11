@@ -1,10 +1,19 @@
+import React from 'react';
 import styled from 'styled-components';
 import watchIcon from 'assets/icons/watch.svg';
 
-const StyledInputBar: React.FC<{ error?: string; type?: string }> = styled.div<{
+const StyledInputBar: React.FC<{
   error?: string;
   type?: string;
+  margin?: string;
+  width?: string;
+}> = styled.div<{
+  error?: string;
+  type?: string;
+  margin?: string;
+  width?: string;
 }>`
+  width: 100%;
   margin: 24px 0;
   position: relative;
   > input {
@@ -48,6 +57,7 @@ const StyledInputBar: React.FC<{ error?: string; type?: string }> = styled.div<{
     margin: 5px 2px;
     color: ${({ theme }) => theme.colors.error20};
     font-size: ${({ theme }) => theme.sizes.xxs};
+    margin: ${({ margin }) => margin || '10px 0'};
   }
   > input[type='button'] {
     cursor: pointer;
