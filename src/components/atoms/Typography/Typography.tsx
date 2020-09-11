@@ -5,7 +5,11 @@ import { StyledHeading, StyledParagraph } from './Typography.styled';
 const Typography: React.FC<TypographyProps> = ({ type, variant, children }: TypographyProps) => {
   return (
     <>
-      {type === 'heading' && <StyledHeading variant={variant}>{children}</StyledHeading>}
+      {type === 'heading' && (
+        <StyledHeading variant={variant} as={variant as React.ElementType}>
+          {children}
+        </StyledHeading>
+      )}
       {type === 'paragraph' && <StyledParagraph variant={variant}>{children}</StyledParagraph>}
     </>
   );
