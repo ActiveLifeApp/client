@@ -3,7 +3,8 @@ import styled, { css } from 'styled-components';
 import { StyledButtonProps } from './Button.model';
 
 export const StyledPrimaryButton: React.FC<StyledButtonProps> = styled.button<StyledButtonProps>`
-  width: ${({ width }) => width || '260px'};
+  display: block;
+  width: 260px;
   height: 58px;
   border: none;
   border-radius: 50px;
@@ -32,7 +33,8 @@ export const StyledPrimaryButton: React.FC<StyledButtonProps> = styled.button<St
 `;
 
 export const StyledSecondaryButton: React.FC<StyledButtonProps> = styled.button<StyledButtonProps>`
-  width: ${({ width }) => width || '260px'};
+  display: block;
+  width: 260px;
   height: 58px;
   border: 1px solid ${({ theme }) => theme.colors.primary20};
   border-radius: 50px;

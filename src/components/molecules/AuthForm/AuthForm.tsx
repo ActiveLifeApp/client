@@ -1,28 +1,36 @@
 import React from 'react';
-import { Typography, Input, Button, ButtonLink } from 'components';
-import { StyledWrapper, StyledForm } from './AuthForm.styled';
+import { Typography, Input, ButtonLink } from 'components';
+import {
+  StyledWrapper,
+  HeaderWrapper,
+  FooterWrapper,
+  StyledSubheading,
+  StyledButton,
+  StyledParagraph,
+} from './AuthForm.styled';
 
-const AuthForm: React.FC<{}> = () => {
-  return (
-    <StyledWrapper>
-      <Typography type="heading" variant="h2" margin="0 0 10px 0">
+const AuthForm: React.FC<{}> = () => (
+  <StyledWrapper>
+    <HeaderWrapper>
+      <Typography type="heading" variant="h2">
         Sign in
       </Typography>
-      <Typography type="paragraph" variant="p2" margin="0 0 50px 0">
+      <StyledSubheading type="paragraph" variant="p2">
         Sign in to continue
-      </Typography>
-      <StyledForm>
-        <Input type="text" label="Email" id="email" />
-        <Input type="password" label="Password" id="password" margin="0 0 70px 0" />
-        <Button type="submit" width="60%">
-          Sign in
-        </Button>
-      </StyledForm>
-      <Typography type="paragraph" variant="p3" align="center" margin="10px 0 0 0">
-        Don’t have an account? <ButtonLink>Sign Up</ButtonLink>
-      </Typography>
-    </StyledWrapper>
-  );
-};
+      </StyledSubheading>
+    </HeaderWrapper>
+    <form>
+      <Input type="text" label="Email" id="email" />
+      <Input type="password" label="Password" id="password" />
+      <StyledButton type="submit">Sign in</StyledButton>
+    </form>
+    <FooterWrapper>
+      <StyledParagraph type="paragraph" variant="p3">
+        Don’t have an account?
+      </StyledParagraph>
+      <ButtonLink>Sign Up</ButtonLink>
+    </FooterWrapper>
+  </StyledWrapper>
+);
 
 export default AuthForm;
