@@ -1,14 +1,15 @@
 import React from 'react';
-import { Wrapper } from './SliderItem.styled';
+import { Wrapper, StyledHeading, StyledParagraph } from './SliderItem.styled';
+import { SliderItemProps } from './SliderItem.model';
 
-const SliderItem = () => (
+const SliderItem: React.FC<SliderItemProps> = ({ title, description }) => (
   <Wrapper>
-    <h2>Lorem ipsum</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis nemo sequi laudantium dolore
-      necessitatibus deleniti obcaecati magni totam voluptates deserunt sit cum officiis, harum
-      expedita neque voluptatum consequatur earum suscipit?
-    </p>
+    <StyledHeading type="heading" variant="h2">
+      {title}
+    </StyledHeading>
+    <StyledParagraph type="paragraph" variant="p1">
+      {description}
+    </StyledParagraph>
   </Wrapper>
 );
 
