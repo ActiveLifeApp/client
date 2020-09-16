@@ -14,4 +14,5 @@ export const StyledParagraph = styled.p<StyledParagraphProps>`
     theme.sizes[VariantSizes[variant as keyof typeof VariantSizes]]};
   color: ${({ theme, variant }) =>
     variant === 'p1' ? theme.colors.black : theme.colors.neutral20};
+  line-height: 1.6;
 `;

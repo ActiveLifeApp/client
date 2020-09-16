@@ -4,6 +4,7 @@ export interface TypographyProps {
   type: 'heading' | 'paragraph';
   variant: string;
   children: string;
+  className?: string;
 }
 
 export interface StyledHeadingProps {
