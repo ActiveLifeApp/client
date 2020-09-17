@@ -4,7 +4,6 @@ import useInterval from 'hooks/useInterval';
 import { Wrapper, SliderList } from './Slider.styled';
 import { slideList } from './Slider.data';
 
-
 const Slider: React.FC<{}> = () => {
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -21,7 +20,7 @@ const Slider: React.FC<{}> = () => {
     <Wrapper>
       <SliderList posX={activeSlide * -100 || 0}>
         {slideList.map((s) => (
-          <SliderItem key={s.title} title={s.title} description={s.description} />
+          <SliderItem key={s.title} title={s.title} description={s.description} image={s.image} />
         ))}
       </SliderList>
       <SliderPagination
