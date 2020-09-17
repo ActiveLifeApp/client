@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from 'styles/theme';
 import Checkbox from './Checkbox';
 
-describe('Checbox component', () => {
+describe('Checkbox component', () => {
   test('is rendered with label', () => {
     const { getByLabelText } = render(
       <ThemeProvider theme={theme}>
