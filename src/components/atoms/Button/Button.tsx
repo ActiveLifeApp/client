@@ -6,9 +6,13 @@ const Button: React.FC<ButttonProps> = ({ children, disabled, secondary }) => {
   return (
     <>
       {secondary ? (
-        <StyledSecondaryButton disabled={disabled}>{children}</StyledSecondaryButton>
+        <StyledSecondaryButton disabled={disabled} data-testid="secondary">
+          {children}
+        </StyledSecondaryButton>
       ) : (
-        <StyledPrimaryButton disabled={disabled}>{children}</StyledPrimaryButton>
+        <StyledPrimaryButton disabled={disabled} data-testid="primary">
+          {children}
+        </StyledPrimaryButton>
       )}
     </>
   );
