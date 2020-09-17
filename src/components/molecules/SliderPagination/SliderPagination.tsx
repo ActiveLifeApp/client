@@ -10,7 +10,11 @@ const SliderPagination: React.FC<SliderPaginationProps> = ({
   <Wrapper>
     {slides.map((s, index) => (
       <Item key={s}>
-        <Button isActive={index === activeSlide} onClick={() => setActiveSlide(index)} />
+        <Button
+          isActive={index === activeSlide}
+          onClick={() => setActiveSlide(index)}
+          disabled={index === activeSlide}
+        />
       </Item>
     ))}
   </Wrapper>
