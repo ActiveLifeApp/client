@@ -43,7 +43,7 @@ const StyledInputBar: React.FC<{ error?: string; type?: string }> = styled.div<{
     top: -22px;
     font-size: ${({ theme }) => theme.sizes.xxs};
   }
-  > span {
+  > p {
     display: block;
     margin: 5px 2px;
     color: ${({ theme }) => theme.colors.error20};
