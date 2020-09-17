@@ -5,7 +5,7 @@ import theme from 'styles/theme';
 import Button from './Button';
 
 describe('Button component', () => {
-  test('is displayed as a default component', () => {
+  test('is rendered as a default component', () => {
     const { container } = render(
       <ThemeProvider theme={theme}>
         <Button>text</Button>
@@ -15,7 +15,7 @@ describe('Button component', () => {
     expect(container).toHaveTextContent(/text/i);
   });
 
-  test('is displayed as a primary component', () => {
+  test('is rendered as a primary component', () => {
     const { queryByTestId } = render(
       <ThemeProvider theme={theme}>
         <Button>text</Button>
@@ -26,7 +26,7 @@ describe('Button component', () => {
     expect(primary).toBeInTheDocument();
   });
 
-  test('is displayed as a secondary component', () => {
+  test('is rendered as a secondary component', () => {
     const { queryByTestId } = render(
       <ThemeProvider theme={theme}>
         <Button secondary>text</Button>
@@ -37,7 +37,7 @@ describe('Button component', () => {
     expect(secondary).toBeInTheDocument();
   });
 
-  test('is displayed as disabled', () => {
+  test('is rendered as disabled', () => {
     const { queryByTestId, rerender } = render(
       <ThemeProvider theme={theme}>
         <Button disabled>text</Button>

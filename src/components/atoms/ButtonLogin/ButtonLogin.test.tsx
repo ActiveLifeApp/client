@@ -5,7 +5,7 @@ import theme from 'styles/theme';
 import ButtonLogin from './ButtonLogin';
 
 describe('ButtonLogin component', () => {
-  test('is displayed', () => {
+  test('is rendered', () => {
     const { getByTestId } = render(
       <ThemeProvider theme={theme}>
         <ButtonLogin>text</ButtonLogin>
@@ -16,7 +16,7 @@ describe('ButtonLogin component', () => {
     expect(buttonLogin).toBeInTheDocument();
   });
 
-  test('is displayed with icon', () => {
+  test('is rendered with icon', () => {
     const { getByTestId, rerender } = render(
       <ThemeProvider theme={theme}>
         <ButtonLogin icon="google" />

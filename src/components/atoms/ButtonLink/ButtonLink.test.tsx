@@ -5,7 +5,7 @@ import theme from 'styles/theme';
 import ButtonLink from './ButtonLink';
 
 describe('ButtonLink component', () => {
-  test('is displayed', () => {
+  test('is rendered', () => {
     const { getByTestId } = render(
       <ThemeProvider theme={theme}>
         <ButtonLink>text</ButtonLink>

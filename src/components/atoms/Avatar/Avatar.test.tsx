@@ -11,12 +11,12 @@ const renderAvatar = (avatarURL?: string) => {
 };
 
 describe('Avatar component', () => {
-  test('is displayed as a default component', () => {
+  test('is rendered as a default component', () => {
     const { avatar } = renderAvatar();
 
     expect(avatar).toBeInTheDocument();
   });
-  test('is displayed with avatarURL', () => {
+  test('is rendered with avatarURL', () => {
     const { avatar } = renderAvatar(avatarPerson);
 
     expect(avatar).toBeInTheDocument();
