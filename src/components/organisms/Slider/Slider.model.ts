@@ -1,7 +1,11 @@
 import { SliderItemProps } from 'components/molecules/SliderItem/SliderItem.model';
 
-interface SlideData extends SliderItemProps {
+interface SlideItem extends SliderItemProps {
   key: string;
 }
 
-export type SlideListData = SlideData[];
+export type SlideListData = SlideItem[];
+
+export interface SliderStyledProps {
+  posX?: number;
+}

@@ -4,7 +4,7 @@ import { Typography } from 'components';
 const Wrapper = styled.li`
   flex-shrink: 0;
   width: 100%;
-  padding: 80px;
+  padding: 20px;
   margin: 0;
 `;
 

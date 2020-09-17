@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SliderStyledProps } from './Slider.model';
 
 const Wrapper = styled.div`
   overflow: hidden;
@@ -7,7 +8,7 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary20};
 `;
 
-const SliderList = styled.ul<{ posX?: number }>`
+const SliderList = styled.ul<SliderStyledProps>`
   position: relative;
   left: 0;
   transform: ${({ posX }) => `translateX(${posX}%)`};
