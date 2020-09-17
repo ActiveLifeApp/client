@@ -19,4 +19,14 @@ const StyledParagraph = styled(Typography)`
   opacity: 0.9;
 `;
 
-export { Wrapper, StyledHeading, StyledParagraph };
+const ImageWrapper = styled.div`
+  height: 20vh;
+  margin: 0 0 40px;
+`;
+
+const Image = styled.img`
+  display: block;
+  height: 100%;
+`;
+
+export { Wrapper, StyledHeading, StyledParagraph, ImageWrapper, Image };
