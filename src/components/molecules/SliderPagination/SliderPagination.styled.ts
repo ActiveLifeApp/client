@@ -4,13 +4,14 @@ import { SliderPaginationStyled } from './SliderPagination.model';
 const Wrapper = styled.ul`
   display: flex;
   padding: 0 20px;
-  margin: 0;
+  margin: 0 0 0 -20px;
   list-style: none;
 `;
 
 const Item = styled.li`
   display: block;
   padding: 0;
+  margin: 0;
 `;
 
 const Button = styled.button<SliderPaginationStyled>`
@@ -24,6 +25,10 @@ const Button = styled.button<SliderPaginationStyled>`
   background: ${({ theme, isActive }) => (isActive ? theme.colors.white : 'none')};
   transition: all 0.35s;
   cursor: pointer;
+
+  &:disabled {
+    background: ${({ theme }) => theme.colors.white};
+  }
 `;
 
 export { Wrapper, Item, Button };

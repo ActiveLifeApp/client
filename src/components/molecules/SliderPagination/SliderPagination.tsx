@@ -4,10 +4,11 @@ import { SliderPaginationProps } from './SliderPagination.model';
 
 const SliderPagination: React.FC<SliderPaginationProps> = ({
   slides,
+  className,
   activeSlide,
   setActiveSlide,
 }) => (
-  <Wrapper>
+  <Wrapper className={className}>
     {slides.map((s, index) => (
       <Item key={s}>
         <Button

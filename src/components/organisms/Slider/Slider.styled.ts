@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import { Logo, SliderPagination } from 'components';
 import { SliderStyledProps } from './Slider.model';
 
 const Wrapper = styled.div`
+  position: relative;
   overflow: hidden;
   height: 100vh;
   width: 33%;
@@ -19,4 +21,14 @@ const SliderList = styled.ul<SliderStyledProps>`
   transition: transform 1s;
 `;
 
-export { Wrapper, SliderList };
+const StyledSliderPagination = styled(SliderPagination)`
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+`;
+
+const StyledLogo = styled(Logo)`
+  padding: 60px 60px 30px;
+`;
+
+export { Wrapper, SliderList, StyledLogo, StyledSliderPagination };
