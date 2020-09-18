@@ -1,11 +1,15 @@
+import React from 'react';
 import styled from 'styled-components';
 import watchIcon from 'assets/icons/watch.svg';
 
-const StyledInputBar: React.FC<{ error?: string; type?: string }> = styled.div<{
+const StyledInputBar: React.FC<{
+  error?: string;
+  type?: string;
+}> = styled.div<{
   error?: string;
   type?: string;
 }>`
-  margin: 24px 0;
+  width: 100%;
   position: relative;
   > input {
     padding-right: ${({ type }) => type === 'password' && '40px'};
@@ -43,9 +47,9 @@ const StyledInputBar: React.FC<{ error?: string; type?: string }> = styled.div<{
     top: -22px;
     font-size: ${({ theme }) => theme.sizes.xxs};
   }
-  > span {
+  > p {
     display: block;
-    margin: 5px 2px;
+    margin: 5px 2px 48px;
     color: ${({ theme }) => theme.colors.error20};
     font-size: ${({ theme }) => theme.sizes.xxs};
   }

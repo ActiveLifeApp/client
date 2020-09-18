@@ -1,6 +1,9 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
+import { StyledButtonProps } from './Button.model';
 
-export const StyledPrimaryButton = styled.button`
+export const StyledPrimaryButton: React.FC<StyledButtonProps> = styled.button<StyledButtonProps>`
+  display: block;
   width: 260px;
   height: 58px;
   border: none;
@@ -29,7 +32,8 @@ export const StyledPrimaryButton = styled.button`
     `}
 `;
 
-export const StyledSecondaryButton = styled.button`
+export const StyledSecondaryButton: React.FC<StyledButtonProps> = styled.button<StyledButtonProps>`
+  display: block;
   width: 260px;
   height: 58px;
   border: 1px solid ${({ theme }) => theme.colors.primary20};

@@ -5,6 +5,7 @@ export { default as ButtonLink } from './atoms/ButtonLink';
 export { default as Switch } from './atoms/Switch';
 export { default as Avatar } from './atoms/Avatar';
 export { default as ButtonLogin } from './atoms/ButtonLogin';
+export { default as Input } from './atoms/Input';
 export { default as Typography } from './atoms/Typography';
 export { default as Logo } from './atoms/Logo';
 

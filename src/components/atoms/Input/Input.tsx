@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import StyledInputBar from './Input.styled';
 import { InputProps } from './Input.model';
 
-const Checkbox: React.FC<InputProps> = ({ type, label, id, name, error }) => {
+const Input: React.FC<InputProps> = ({ type, label, id, name, error }) => {
   const [inputType, setInputType] = useState(type);
 
   const handleButtonClick = () => {
@@ -13,13 +13,15 @@ const Checkbox: React.FC<InputProps> = ({ type, label, id, name, error }) => {
   };
 
   return (
-    <StyledInputBar error={error} type={type}>
+    <StyledInputBar error={error} type={type} data-testid="input">
       <input type={inputType} name={name} id={id} placeholder=" " />
       <label htmlFor={id}>{label}</label>
-      {type === 'password' && <input type="button" onClick={handleButtonClick} />}
-      <span>{error}</span>
+      {type === 'password' && (
+        <input type="button" onClick={handleButtonClick} data-testid="button" />
+      )}
+      <p>{error}</p>
     </StyledInputBar>
   );
 };
 
-export default Checkbox;
+export default Input;

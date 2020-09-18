@@ -10,10 +10,12 @@ export interface TypographyProps {
 export interface StyledHeadingProps {
   variant: string;
   as: React.ElementType;
+  className?: string;
 }
 
 export interface StyledParagraphProps {
   variant: string;
+  className?: string;
 }
 
 export enum VariantSizes {
