@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import StyledInputBar from './Input.styled';
 import { InputProps } from './Input.model';
 
-const Checkbox: React.FC<InputProps> = ({ type, label, id, name, error }) => {
+const Input: React.FC<InputProps> = ({ type, label, id, name, error }) => {
   const [inputType, setInputType] = useState(type);
 
   const handleButtonClick = () => {
@@ -22,4 +22,4 @@ const Checkbox: React.FC<InputProps> = ({ type, label, id, name, error }) => {
   );
 };
 
-export default Checkbox;
+export default Input;

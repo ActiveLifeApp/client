@@ -2,13 +2,24 @@ import React from 'react';
 import { StyledPrimaryButton, StyledSecondaryButton } from './Button.styled';
 import { ButttonProps } from './Button.model';
 
-const Button: React.FC<ButttonProps> = ({ children, disabled, secondary }) => {
+const Button: React.FC<ButttonProps> = ({
+  className,
+  type,
+  children,
+  disabled,
+  secondary,
+  ...props
+}) => {
   return (
     <>
       {secondary ? (
-        <StyledSecondaryButton disabled={disabled}>{children}</StyledSecondaryButton>
+        <StyledSecondaryButton className={className} type={type} disabled={disabled} {...props}>
+          {children}
+        </StyledSecondaryButton>
       ) : (
-        <StyledPrimaryButton disabled={disabled}>{children}</StyledPrimaryButton>
+        <StyledPrimaryButton className={className} type={type} disabled={disabled} {...props}>
+          {children}
+        </StyledPrimaryButton>
       )}
     </>
   );
