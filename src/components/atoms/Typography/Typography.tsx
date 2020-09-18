@@ -2,7 +2,8 @@ import React from 'react';
 import { TypographyProps } from './Typography.model';
 import { StyledHeading, StyledParagraph } from './Typography.styled';
 
-const Typography: React.FC<TypographyProps> = ({ className, type, variant, children }) => {
+
+const Typography: React.FC<TypographyProps> = ({ type, variant, children, className }) => {
   return (
     <>
       {type === 'heading' && (
