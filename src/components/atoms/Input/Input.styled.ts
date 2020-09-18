@@ -47,7 +47,7 @@ const StyledInputBar: React.FC<{
     top: -22px;
     font-size: ${({ theme }) => theme.sizes.xxs};
   }
-  > span {
+  > p {
     display: block;
     margin: 5px 2px 48px;
     color: ${({ theme }) => theme.colors.error20};

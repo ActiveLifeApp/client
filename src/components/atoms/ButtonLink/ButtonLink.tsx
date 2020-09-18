@@ -4,7 +4,7 @@ import StyledButtonLink from './ButtonLink.styled';
 
 const ButtonLink: React.FC<ButtonLinkProps> = ({ children, disabled, uppercase }) => {
   return (
-    <StyledButtonLink disabled={disabled} uppercase={uppercase}>
+    <StyledButtonLink disabled={disabled} uppercase={uppercase} data-testid="button-link">
       {children}
     </StyledButtonLink>
   );
