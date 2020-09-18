@@ -13,11 +13,23 @@ const Button: React.FC<ButttonProps> = ({
   return (
     <>
       {secondary ? (
-        <StyledSecondaryButton className={className} type={type} disabled={disabled} data-testid="secondary" {...props}>
+        <StyledSecondaryButton
+          className={className}
+          type={type}
+          disabled={disabled}
+          data-testid="secondary"
+          {...props}
+        >
           {children}
         </StyledSecondaryButton>
       ) : (
-        <StyledPrimaryButton className={className} type={type} disabled={disabled} data-testid="primary" {...props}>
+        <StyledPrimaryButton
+          className={className}
+          type={type}
+          disabled={disabled}
+          data-testid="primary"
+          {...props}
+        >
           {children}
         </StyledPrimaryButton>
       )}

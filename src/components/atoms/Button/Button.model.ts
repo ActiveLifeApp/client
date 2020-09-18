@@ -1,11 +1,12 @@
 export interface ButttonProps {
   disabled?: boolean;
   secondary?: boolean;
-  type?: string;
   className?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export interface StyledButtonProps {
-  type?: string;
   disabled?: boolean;
+  className?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
