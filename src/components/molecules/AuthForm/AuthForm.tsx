@@ -1,36 +1,23 @@
 import React from 'react';
-import { Typography, Input, ButtonLink } from 'components';
-import {
-  StyledWrapper,
-  HeaderWrapper,
-  FooterWrapper,
-  StyledSubheading,
-  StyledButton,
-  StyledParagraph,
-} from './AuthForm.styled';
 
-const AuthForm: React.FC<{}> = () => (
-  <StyledWrapper>
-    <HeaderWrapper>
-      <Typography type="heading" variant="h2">
-        Sign in
-      </Typography>
-      <StyledSubheading type="paragraph" variant="p2">
-        Sign in to continue
-      </StyledSubheading>
-    </HeaderWrapper>
-    <form>
-      <Input type="text" label="Email" id="email" />
-      <Input type="password" label="Password" id="password" />
-      <StyledButton type="submit">Sign in</StyledButton>
-    </form>
-    <FooterWrapper>
-      <StyledParagraph type="paragraph" variant="p3">
-        Don’t have an account?
-      </StyledParagraph>
-      <ButtonLink>Sign Up</ButtonLink>
-    </FooterWrapper>
-  </StyledWrapper>
+import { Input } from 'components';
+import { StyledForm, StyledCheckbox, StyledButton } from './AuthForm.styled';
+import { AuthFormProps } from './AuthForm.model';
+
+const AuthForm: React.FC<AuthFormProps> = ({ viewType }) => (
+  <StyledForm>
+    <Input type="text" label="Email" name="email" id="email" />
+    <Input type="passowrd" label="Password" name="password" id="password" />
+    {viewType === 'registration' && (
+      <Input type="passowrd" label="Repeat password" name="repeatPassword" id="repeatPassword" />
+    )}
+    <StyledCheckbox
+      label="I accept the Privacy Policy, Cookies and Terms."
+      name="policyAccept"
+      id="policyAccept"
+    />
+    <StyledButton type="submit">{viewType === 'login' ? 'Sign In' : 'Sign up'}</StyledButton>
+  </StyledForm>
 );
 
 export default AuthForm;
