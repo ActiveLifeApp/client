@@ -1,12 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
 import watchIcon from 'assets/icons/watch.svg';
 
-const StyledInputBar: React.FC<{
-  error?: string;
-  type?: string;
-}> = styled.div<{
-  error?: string;
+const StyledInputBar = styled.div<{
+  error?: boolean;
   type?: string;
 }>`
   width: 100%;

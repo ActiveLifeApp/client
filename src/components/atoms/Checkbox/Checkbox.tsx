@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CheckboxProps } from './Checkbox.model';
 import StyledCheckbox from './Checkbox.styled';
 
-const Checkbox: React.FC<CheckboxProps> = ({ label, checked, id, name }) => {
-  const [isChecked, setIsChecked] = useState(checked);
-
+const Checkbox: React.FC<CheckboxProps> = ({ label, id, name, register, rules = {}, errors }) => {
   return (
-    <StyledCheckbox>
-      <input
-        onClick={() => setIsChecked((prevState) => !prevState)}
-        type="checkbox"
-        id={id}
-        name={name}
-        checked={isChecked}
-      />
+    <StyledCheckbox errors={!!errors}>
+      <input type="checkbox" id={id} name={name} ref={register && register(rules)} />
       <label htmlFor={id}>{label}</label>
     </StyledCheckbox>
   );

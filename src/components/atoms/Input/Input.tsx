@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import StyledInputBar from './Input.styled';
 import { InputProps } from './Input.model';
 
-const Input: React.FC<InputProps> = ({ type, label, id, name, error }) => {
+const Input: React.FC<InputProps> = ({ type, label, id, name, rules = {}, errors, register }) => {
   const [inputType, setInputType] = useState(type);
 
   const handleButtonClick = () => {
@@ -13,13 +13,19 @@ const Input: React.FC<InputProps> = ({ type, label, id, name, error }) => {
   };
 
   return (
-    <StyledInputBar error={error} type={type} data-testid="input">
-      <input type={inputType} name={name} id={id} placeholder=" " />
+    <StyledInputBar error={!!errors} type={type} data-testid="input">
+      <input
+        type={inputType}
+        name={name}
+        id={id}
+        placeholder=" "
+        ref={register && register(rules)}
+      />
       <label htmlFor={id}>{label}</label>
       {type === 'password' && (
         <input type="button" onClick={handleButtonClick} data-testid="button" />
       )}
-      <p>{error}</p>
+      <p>{errors?.message}</p>
     </StyledInputBar>
   );
 };
