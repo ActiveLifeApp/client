@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyledPrimaryButton, StyledSecondaryButton } from './Button.styled';
-import { ButttonProps } from './Button.model';
+import { ButtonProps } from './Button.model';
 
-const Button: React.FC<ButttonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   className,
   type,
   children,
