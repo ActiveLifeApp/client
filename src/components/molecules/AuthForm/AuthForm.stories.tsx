@@ -7,4 +7,5 @@ export default {
   component: AuthForm,
 } as Meta;
 
-export const Primary: React.FC<{}> = () => <AuthForm />;
+export const Login: React.FC<{}> = () => <AuthForm viewType="login" />;
+export const Registration: React.FC<{}> = () => <AuthForm viewType="registration" />;

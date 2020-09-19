@@ -1,4 +1,4 @@
-export interface ButttonProps {
+export interface ButtonProps {
   disabled?: boolean;
   secondary?: boolean;
   className?: string;

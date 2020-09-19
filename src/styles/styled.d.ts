@@ -39,5 +39,13 @@ declare module 'styled-components' {
       regular: string;
       bold: string;
     };
+    devices: {
+      mobile: string;
+      mobileL: string;
+      tablet: string;
+      tabletL: string;
+      desktop: string;
+      desktopFHD: string;
+    };
   }
 }

@@ -4,8 +4,9 @@ import useInterval from 'hooks/useInterval';
 import { SliderItem } from 'components';
 import { Wrapper, SliderList, StyledLogo, StyledSliderPagination } from './Slider.styled';
 import { slideList } from './Slider.data';
+import { SliderProps } from './Slider.model';
 
-const Slider: FC = () => {
+const Slider: FC<SliderProps> = ({ className }) => {
   const [activeSlide, setActiveSlide] = useState<number>(0);
 
   const clear = useInterval(() => {
@@ -18,8 +19,8 @@ const Slider: FC = () => {
   };
 
   return (
-    <Wrapper>
-      <StyledLogo />
+    <Wrapper className={className}>
+      <StyledLogo variant="secondary" />
       <SliderList posX={activeSlide * -100 || 0}>
         {slideList.map((s) => (
           <SliderItem key={s.title} title={s.title} description={s.description} image={s.image} />

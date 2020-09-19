@@ -1,11 +1,17 @@
-import { ReactComponent as LogoIcon } from 'assets/icons/logo.svg';
+import { ReactComponent as LogoPrimaryIcon } from 'assets/icons/logoPrimary.svg';
+import { ReactComponent as LogoSecondaryIcon } from 'assets/icons/logoSecondary.svg';
 import styled from 'styled-components';
 
 const Wrapper = styled.div``;
 
-const StyledLogo = styled(LogoIcon)`
+const StyledLogoPrimary = styled(LogoPrimaryIcon)`
   display: block;
   width: 120px;
 `;
 
-export { Wrapper, StyledLogo };
+const StyledLogoSecondary = styled(LogoSecondaryIcon)`
+  display: block;
+  width: 120px;
+`;
+
+export { Wrapper, StyledLogoPrimary, StyledLogoSecondary };

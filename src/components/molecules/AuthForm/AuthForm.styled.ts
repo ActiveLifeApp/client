@@ -1,31 +1,25 @@
 import styled from 'styled-components';
-import { Button, Typography } from 'components';
+import { Checkbox, Button } from 'components';
 
-export const StyledWrapper = styled.div`
-  width: 500px;
-`;
-
-export const HeaderWrapper = styled.div`
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const FooterWrapper = styled.div`
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-`;
-
-export const StyledSubheading = styled(Typography)`
-  margin-top: 10px;
+export const StyledCheckbox = styled(Checkbox)`
+  margin: 10px;
 `;
 
 export const StyledButton = styled(Button)`
-  margin: 40px auto 0;
+  margin: 58px auto;
 `;
 
-export const StyledParagraph = styled(Typography)`
-  margin-right: 5px;
+export const StyledForm = styled.form`
+  ${({ theme: { devices } }) => devices.tablet} {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  ${({ theme: { devices } }) => devices.desktop} {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
 `;

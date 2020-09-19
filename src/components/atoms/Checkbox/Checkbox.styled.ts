@@ -10,15 +10,15 @@ const StyledCheckbox = styled.div`
     font-size: ${({ theme }) => theme.sizes.xxs};
     font-weight: ${({ theme }) => theme.weights.regular};
     color: ${({ theme }) => theme.colors.neutral20};
+    padding-left: 15px;
   }
   > input + label {
     position: relative;
-    padding-left: 25px;
     cursor: pointer;
     &:before {
       content: '';
       position: absolute;
-      left: 0;
+      left: -10px;
       top: 0px;
       width: 19px;
       height: 19px;
@@ -30,7 +30,7 @@ const StyledCheckbox = styled.div`
       content: '';
       position: absolute;
       top: 0px;
-      left: 0px;
+      left: -10px;
       width: 19px;
       height: 19px;
       background-image: url(${checkedIcon});
