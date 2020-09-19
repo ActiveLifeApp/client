@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { ButtonLink } from 'components';
+import { Typography } from 'components';
 import {
   StyledWrapper,
   InnerWrapper,
   StyledButtonLogin,
+  StyledButtonLink,
   StyledButtonWrapper,
   StyledHeader,
   StyledHeading,
@@ -25,7 +26,16 @@ const LoginTemplate: React.FC<Props> = ({ children, viewType, changeFn }) => {
       <InnerWrapper>
         <StyledHeader>
           <StyledLogo />
-          <ButtonLink onClick={changeFn}>{viewType === 'login' ? 'Sign In' : 'Sign Up'}</ButtonLink>
+          <StyledButtonLink onClick={changeFn}>
+            <>
+              {viewType === 'login' && (
+                <Typography type="paragraph" variant="p2">
+                  Dont&apos;t have an account?&nbsp;
+                </Typography>
+              )}
+              {viewType === 'login' ? 'Sign Up' : 'Sign In'}
+            </>
+          </StyledButtonLink>
         </StyledHeader>
         <div>
           <StyledHeading type="heading" variant="h3">

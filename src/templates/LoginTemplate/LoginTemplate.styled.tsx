@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Logo, ButtonLogin, Typography, Slider } from 'components';
+import { Logo, ButtonLogin, ButtonLink, Typography, Slider } from 'components';
 
 export const StyledWrapper = styled.div`
   padding: 20px;
@@ -72,5 +72,16 @@ export const StyledSlider = styled(Slider)`
   display: none;
   ${({ theme: { devices } }) => devices.tabletL} {
     display: block;
+  }
+`;
+
+export const StyledButtonLink = styled(ButtonLink)`
+  display: flex;
+  align-items: center;
+
+  > p {
+    ${({ theme: { devices } }) => devices.mobileL} {
+      display: none;
+    }
   }
 `;
