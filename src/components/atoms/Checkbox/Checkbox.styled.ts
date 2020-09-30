@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import checkedIcon from 'assets/icons/checked.svg';
 
-const StyledCheckbox = styled.div`
+const StyledCheckbox = styled.div<{ errors?: boolean }>`
   display: inline-block;
   > input {
     opacity: 0;
@@ -9,7 +9,7 @@ const StyledCheckbox = styled.div`
   > label {
     font-size: ${({ theme }) => theme.sizes.xxs};
     font-weight: ${({ theme }) => theme.weights.regular};
-    color: ${({ theme }) => theme.colors.neutral20};
+    color: ${({ theme, errors }) => (errors ? theme.colors.error20 : theme.colors.neutral20)};
     padding-left: 15px;
   }
   > input + label {

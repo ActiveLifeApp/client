@@ -14,11 +14,5 @@ export const Password: React.FC<{}> = () => (
   <Input type="password" label="password" name="password" id="password" />
 );
 export const Error: React.FC<{}> = () => (
-  <Input
-    type="password"
-    label="password"
-    name="example-error"
-    id="example-error"
-    error="Wrong password!"
-  />
+  <Input type="password" label="password" name="example-error" id="example-error" />
 );
