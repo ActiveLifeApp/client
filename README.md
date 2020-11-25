@@ -13,6 +13,6 @@ This is an open source project of application to healthy life style. The project
 
 ## Contribution
 
-Do you want to contribute in this project? Send email: lukmasz.michalak96@outlook.com 😉
+Do you want to contribute in this project? Send email: lukasz.michalak96@outlook.com 😉
 
 
