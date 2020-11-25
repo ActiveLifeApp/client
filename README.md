@@ -1,9 +1,11 @@
 ### ActiveLife 
-[](https://i.imgur.com/BhVXha1.png)
+<p align="center">
+<img src="https://i.imgur.com/BhVXha1.png">
+</p>
 
 ## About Project 📖
 
-This is an open source project of application to healthy life style.
+This is an open source project of application to healthy life style. The project use React with TypeScript. 
 
 ## Authors: 
 [ilukaszm](https://github.com/ilukaszm)
