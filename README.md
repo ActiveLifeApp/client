@@ -5,7 +5,7 @@
 
 ## About Project 📖
 
-This is an open source project of application to healthy life style. The project use React with TypeScript. 
+This is an open source project of application to healthy lifestyle. The project use React with TypeScript. 
 
 ## Authors: 
 [ilukaszm](https://github.com/ilukaszm)
